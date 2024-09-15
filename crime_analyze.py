@@ -15,7 +15,8 @@ pd.options.display(df.describe())
 # Distribution of Crome Occcurence over Time of Occurence
 plt.figure(figsize = (15,6))
 h = (df['TimeOccHr']).hist(bins = 24)
-h.set(xlabel = "Hour of Day", ylabel = "Crime Occurences")
+h.set(xlabel = "Hour of Day", ylabel = "Crime Occurences",
+      title = "Distribution of Crime Occurences over Time of Day")
 plt.xticks(ticks = [2*i for i in range(13)])
 plt.show()
 
