@@ -8,7 +8,7 @@ lint:
 	pylint --ignore-patterns=test_.*?py *.py
 
 test:
-	python -m pytest -cov=sample test_sample.py
+	python -m pytest -cov=crime_analyze test_crime_analyze.py
 
 all:
 	install format lint test
