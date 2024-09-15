@@ -4,8 +4,13 @@ It produces summary statistics and data visualizations'''
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
+import zipfile
 
-df = pd.read_csv('Crime_Data_from_2020_to_Present.csv')
+with zipfile.ZipFile('Crime_Data_from_2020_to_Present.csv.zip') as z:
+   with z.open("Crime_Data_from_2020_to_Present.csv") as f:
+      df = pd.read_csv(f)
+
+# df = pd.read_csv('Crime_Data_from_2020_to_Present.csv')
 
 df['TimeOccHr'] = df['TIME OCC']//100 + df['TIME OCC']%100/60
 
