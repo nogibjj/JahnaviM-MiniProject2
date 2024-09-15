@@ -9,6 +9,6 @@ matplotlib
 pandas
 seaborn
 matplotlib
-plotlyg
+plotly
 zipfile
 IPython
