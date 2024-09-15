@@ -12,8 +12,6 @@ with zipfile.ZipFile('Crime_Data_from_2020_to_Present.csv.zip') as z:
     with z.open("Crime_Data_from_2020_to_Present.csv") as f:
         df = pd.read_csv(f)
 
-# df = pd.read_csv('Crime_Data_from_2020_to_Present.csv')
-
 df['TimeOccHr'] = df['TIME OCC']//100 + df['TIME OCC']%100/60
 
 ## Show summary statistics of the dataframe.
@@ -25,7 +23,7 @@ h = (df['TimeOccHr']).hist(bins = 24)
 h.set(xlabel = "Hour of Day", ylabel = "Crime Occurences",
       title = "Distribution of Crime Occurences over Time of Day")
 plt.xticks(ticks = [2*i for i in range(13)])
-plt.show()
+
 
 # Create a geographical plot to capture LAPD Crime Rate by LAT and LON
 df_graph = df[df['LAT'] != 0].groupby(['AREA NAME', 'LAT', 'LON']).count()[['DR_NO']].reset_index()
@@ -54,7 +52,7 @@ fig = px.scatter_mapbox(df_graph,
 
 fig.update_layout(mapbox_style="carto-positron") #open-street-map
 fig.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-fig.show()
+
 
 # Create a Histogram of Victim Age
 plt.figure(figsize = (15, 5))
@@ -63,4 +61,7 @@ p.set(xlabel = 'Victim Age', ylabel = 'Number of Victims',
       title = "Distribution of Victim Ages in LAPD")
 plt.xticks(ticks = [10*i for i in range(0,13)])
 plt.xlim(0,120)
+
+fig.show()
 plt.show()
+plt.close()
