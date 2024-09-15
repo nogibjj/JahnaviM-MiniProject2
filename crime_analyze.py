@@ -9,7 +9,7 @@ df = pd.read_csv('Crime_Data_from_2020_to_Present.csv')
 df['TimeOccHr'] = df['TIME OCC']//100 + df['TIME OCC']%100/60
 
 ## Show summary statistics of the dataframe.
-display(df.describe())
+pd.options.display(df.describe())
 
 # Distribution of Crome Occcurence over Time of Occurence
 plt.figure(figsize = (15,6))
