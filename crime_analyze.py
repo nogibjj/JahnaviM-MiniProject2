@@ -17,7 +17,7 @@ with zipfile.ZipFile('Crime_Data_from_2020_to_Present.csv.zip') as z:
 df['TimeOccHr'] = df['TIME OCC']//100 + df['TIME OCC']%100/60
 
 ## Show summary statistics of the dataframe.
-pd.options.display(df.describe())
+display(df.describe())
 
 # Distribution of Crome Occcurence over Time of Occurence
 plt.figure(figsize = (15,6))
