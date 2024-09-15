@@ -10,5 +10,4 @@ pandas
 seaborn
 matplotlib
 plotly
-zipfile
 IPython
