@@ -1,14 +1,15 @@
 '''This file reads a crime dataset based on LAPD.
 It produces summary statistics and data visualizations'''
 
+import zipfile
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
-import zipfile
+
 
 with zipfile.ZipFile('Crime_Data_from_2020_to_Present.csv.zip') as z:
-   with z.open("Crime_Data_from_2020_to_Present.csv") as f:
-      df = pd.read_csv(f)
+    with z.open("Crime_Data_from_2020_to_Present.csv") as f:
+        df = pd.read_csv(f)
 
 # df = pd.read_csv('Crime_Data_from_2020_to_Present.csv')
 
