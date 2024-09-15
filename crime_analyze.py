@@ -2,6 +2,7 @@
 It produces summary statistics and data visualizations'''
 
 import zipfile
+from IPython.display import display
 import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
