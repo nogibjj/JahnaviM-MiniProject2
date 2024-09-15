@@ -1,4 +1,5 @@
-'''This file reads a crime dataset based on LAPD and produces summary statistics and data visualizations'''
+'''This file reads a crime dataset based on LAPD.
+It produces summary statistics and data visualizations'''
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -50,7 +51,7 @@ fig.show()
 # Create a Histogram of Victim Age
 plt.figure(figsize = (15, 5))
 p = df[df['Vict Age'] > 0]['Vict Age'].hist(bins = 16)
-p.set(xlabel = 'Victim Age', ylabel = 'Number of Victims', 
+p.set(xlabel = 'Victim Age', ylabel = 'Number of Victims',
       title = "Distribution of Victim Ages in LAPD")
 plt.xticks(ticks = [10*i for i in range(0,13)])
 plt.xlim(0,120)
