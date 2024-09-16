@@ -30,5 +30,4 @@ The summary statistics of Time of Occurence are not as relevant, so I've created
 Lastly, I created this interactive geographical plot using plotly. When rendered, audience members can interact with the plot to zoom into specific areas in LA and explore which areas are high targets for crime and conduct more analysis. In this plot, at a glance, it is clear that some of the areas with highest crime rate is in the Central are. 
 
 # CI/CD Badge
-![GitHub Workflow Status]
-([add badge to README](https://github.com/nogibjj/JahnaviM-MiniProject2/actions/runs/10876096871))
+![example workflow](https://github.com/github/docs/actions/workflows/ex.yml/badge.svg)
